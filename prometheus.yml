@@ -5,13 +5,13 @@ global:
 scrape_configs:
   - job_name: "backend"
     static_configs:
-      - targets: ["127.0.0.1:6000"]
+      - targets: ["ip:6000"]
         labels:
           instance: "main-server"
-      - targets: ["128.199.252.47:6000"]
+      - targets: ["ip:6000"]
         labels:
           instance: "vps-2"
-      - targets: ["167.172.84.188:6000"]
+      - targets: ["ip:6000"]
         labels:
           instance: "vps-3"
-    metrics_path: "/v1/metrics"
+    metrics_path: "/api/v1/metrics"
